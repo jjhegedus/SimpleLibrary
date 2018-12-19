@@ -1,0 +1,27 @@
+DATAS = "*.glsl" : "/"
+KIND = static
+OPTIONS = \
+	exceptions/on \
+	standard-c++/11 \
+	warn/on
+
+SRCS = \
+	test.cpp
+
+USES = \
+	OpenGL \
+	ml_sdk \
+	stdc++
+
+DEFS.lumin = \
+	ML_DEVICE \
+	USE_GLFW=0
+
+DEFS.win = \
+	ML_WINDOWS \
+	USE_GLFW=1
+
+USES.win = \
+	glad \
+	glfw
+
